@@ -1,4 +1,4 @@
-#SCREAM
+#scream
 SCREAM: Sprint Car Racing: Evolved Action on Mud
 
 As a Lifetime Sprint Car (Sprintcar) fan and geek, combined with the privelege 
