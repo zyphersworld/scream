@@ -3,7 +3,7 @@ SCREAM: Sprint Car Racing: Evolved Action on Mud
 As a Lifetime Sprint Car (Sprintcar) fan and geek, combined with the privilege of being Born and raised next door to Premier Speedway, Warrnambool, home of the Classic, i have been wanting to create this game for years now....and finally that journey has started!
 It'll always be free as I will be releasing the core assets and code under The Creative Commons Licence. (CC-BY-SA) It's my personal thank you to the speedway community for providing such a great outlet and for the infinite entertainment and action over the years. Let's Go Racing!
 
-Mahdah Greene-Moon
+Mahda Greene-Moon
 
 https://mahda.itch.io/scream
 
