@@ -1,31 +1,58 @@
+=========================
+INTRODUCTION
+=========================
+As a Lifetime Sprint Car (Sprintcar) fan and geek,
+combined with the privilege of being Born and raised
+next door to Premier Speedway, Warrnambool, home of the Classic,
+I have wanted to create this game for a long time....
+Finally, that journey has started!
+Introducing...
 SCREAM: Sprint Car Racing: Evolved Action on Mud
-
-As a Lifetime Sprint Car (Sprintcar) fan and geek, combined with the privilege of being Born and raised next door to Premier Speedway, Warrnambool, home of the Classic, i have been wanting to create this game for years now....and finally that journey has started!
-It'll always be free as I will be releasing the core assets and code under The Creative Commons Licence. (CC-BY-SA) It's my personal thank you to the speedway community for providing such a great outlet and for the infinite entertainment and action over the years. Let's Go Racing!
-
+It'll always be free as the core assets and code are released
+under the Creative Commons Licence. (CC-BY-SA)
+It's my personal thank you to the speedway community for providing
+such a great outlet and for the infinite entertainment and action
+over the years.
+Let's Go Racing!
 Mahda Greene-Moon
-
+=========================
+| Features are being rapidly developed.
+| Keep checking for updates often.
+| Some current features include...
+=========================
+-Real Tracks (Premier Speedway done as default)
+-Atmospheric Commentary
+-Screaming Engine Sounds
+-Pit Area
+-Mobile Controls (virtual joystick)
+Here are a few due in the next few updates....
+-Lap Times with Leader board (top 10 best laps)
+-Time Trials, Heats & Mains
+-Interactive Pit Area
+-Body Paint Designer
+-Race Against A.I
+-Networked Multiplayer Support (probably web-sockets)
+=========================
+LINKS:
+=========================
+Play or Download SCREAM on ITCH
 https://mahda.itch.io/scream
-
-
-Tools used:
-
+Source Code Available on GitHub:
+https://github.com/zyphersworld/scream
+=========================
+=========================
+Tools Used:
+=========================
 Game Engine
 Godot 3.3.4
 https://godotengine.org
-
-Textures
-GLES2 shaders
-
 3D Modeling
 Blender
 https://blender.org
-
 Graphics
 GIMP:GNU Image Manipulation Program
 https://gimp.org
-
-Sound Production
+Sound
 Audacity
 https://audacity.org
 
