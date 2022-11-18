@@ -1,45 +1,43 @@
-INTRODUCTION
+As a Lifetime Sprint Car (Sprintcar) fan and geek, combined with the privilege of being Born and raised next door to Premier Speedway, Warrnambool,I have wanted to create this game for a long time....
 
-As a Lifetime Sprint Car (Sprintcar) fan and geek,
-combined with the privilege of being Born and raised
-next door to Premier Speedway, Warrnambool, home of the Classic,
-I have wanted to create this game for a long time....
-Finally, that journey has started!
-Introducing...
-SCREAM: Sprint Car Racing: Evolved Action on Mud
-It'll always be free as the core assets and code are released
-under the Creative Commons Licence. (CC-BY-SA)
-It's my personal thank you to the speedway community for providing
-such a great outlet and for the infinite entertainment and action
-over the years.
-Let's Go Racing!
+Finally, that journey has started! And It'll always be free as the core assets and code are being released under the Creative Commons Licence. (CC-BY-SA)
+
+It's my personal thank you to the speedway community for providing such a great outlet and for the infinite entertainment and action over the years. Let's Go Racing!
+
 Mahda Greene-Moon
+Creator & Developer
 
- Features are being rapidly developed.
- Keep checking for updates often.
- Some current features include...
-
-Real Tracks (Premier Speedway done as default)
-Atmospheric Commentary
-Screaming Engine Sounds
-Pit Area
-Mobile Controls (virtual joystick)
-Here are a few due in the next few updates....
-Lap Times with Leader board (top 10 best laps)
-Time Trials, Heats & Mains
-Interactive Pit Area
-Body Paint Designer
-Race Against A.I
-Networked Multiplayer Support (probably web-sockets)
-
-LINKS:
 Play or Download SCREAM on ITCH
 https://mahda.itch.io/scream
 
 Source Code Available on GitHub:
 https://github.com/zyphersworld/scream
 
+Roadmap:
+
+Track model - DONE
+Sprintcar Model - DONE
+Collision Detection - DONE
+Player Controls  - DONE
+Mobile Controls  - IN PROGRESS
+Commentary Audio	- DONE
+Engine Audio - DONE
+Lap counter - TODO
+Traffic Lights & Flags - TODO
+Pit Trucks - TODO
+Menu System	- IN PROGRESS
+Crowd System	- TODO
+Car Painter - TODO
+Crash System	- TODO
+A.I Cars - TODO
+Weather system - TODO
+Skid-marks - TODO
+Track wear - TODO 
+Networked Multiplayer - TODO
+
+=========================
 Tools Used:
+=========================
 Game Engine
 Godot 3.3.4
 https://godotengine.org
@@ -55,6 +53,7 @@ https://gimp.org
 Sound
 Audacity
 https://audacity.org
+
 
 Shield: [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
