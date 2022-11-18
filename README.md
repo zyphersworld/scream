@@ -35,9 +35,8 @@ Skid-marks - TODO
 Track wear - TODO 
 Networked Multiplayer - TODO
 
-=========================
 Tools Used:
-=========================
+
 Game Engine
 Godot 3.3.4
 https://godotengine.org
