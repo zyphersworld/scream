@@ -1,0 +1,320 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://sprintcar_default.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/MainMenu/MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://debug/roboto_16.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/sponsors.png" type="Texture" id=4]
+[ext_resource path="res://assets/lms2.jpeg" type="Texture" id=5]
+[ext_resource path="res://assets/logo.png" type="Texture" id=6]
+[ext_resource path="res://assets/tvg_44_yougotthis.png" type="Texture" id=7]
+[ext_resource path="res://assets/Material_001.material" type="Material" id=8]
+[ext_resource path="res://assets/FreeSans.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://debug/Roboto-Medium.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://addons/MainMenu/driverName.gd" type="Script" id=11]
+[ext_resource path="res://spin1.gd" type="Script" id=12]
+[ext_resource path="res://addons/MainMenu/driverNumber.gd" type="Script" id=13]
+[ext_resource path="res://addons/MainMenu/gradiantBg.gd" type="Script" id=14]
+[ext_resource path="res://assets/flag.tres" type="Material" id=15]
+[ext_resource path="res://addons/MainMenu/menuButton.tres" type="Material" id=16]
+[ext_resource path="res://addons/MainMenu/wobbletext.gdshader" type="Shader" id=17]
+[ext_resource path="res://assets/engine_idle.wav" type="AudioStream" id=18]
+
+[sub_resource type="GradientTexture" id=294]
+width = 5
+
+[sub_resource type="ProceduralSky" id=1]
+resource_local_to_scene = true
+radiance_size = 0
+sky_top_color = Color( 0.00784314, 0.0196078, 0.113725, 1 )
+sky_horizon_color = Color( 0.0980392, 0.0196078, 0.00392157, 1 )
+sky_curve = 0.136415
+sky_energy = 4.86
+ground_bottom_color = Color( 0.196078, 0.180392, 0.121569, 1 )
+ground_horizon_color = Color( 0.501961, 0.364706, 0.231373, 1 )
+ground_curve = 0.538174
+sun_color = Color( 1, 0.72549, 0, 1 )
+sun_latitude = 12.22
+sun_longitude = -19.33
+sun_angle_min = 0.0
+sun_angle_max = 284.93
+sun_curve = 0.0594605
+sun_energy = 0.19
+texture_size = 1
+
+[sub_resource type="Environment" id=290]
+background_mode = 2
+background_sky = SubResource( 1 )
+background_color = Color( 0.521569, 0.12549, 0.12549, 0 )
+background_energy = 3.14
+ambient_light_color = Color( 0.933333, 0.521569, 0.129412, 1 )
+ambient_light_energy = 1.1
+fog_enabled = true
+fog_color = Color( 0.345098, 0.152941, 0.0509804, 1 )
+fog_depth_begin = 90.0
+fog_depth_end = 200.0
+tonemap_white = 0.42
+dof_blur_far_distance = 0.01
+dof_blur_far_transition = 10.0
+dof_blur_far_amount = 0.12
+dof_blur_near_distance = 0.1
+dof_blur_near_transition = 0.01
+dof_blur_near_amount = 0.18
+glow_enabled = true
+glow_levels/1 = true
+glow_levels/2 = true
+glow_levels/7 = true
+glow_intensity = 1.0
+glow_strength = 0.73
+glow_bloom = 1.0
+adjustment_brightness = 1.1
+adjustment_contrast = 1.1
+adjustment_saturation = 1.71
+
+[sub_resource type="PlaneMesh" id=3]
+size = Vector2( 25, 25 )
+subdivide_width = 16
+subdivide_depth = 16
+
+[sub_resource type="DynamicFont" id=285]
+size = 96
+outline_size = 4
+font_data = ExtResource( 10 )
+
+[sub_resource type="ShaderMaterial" id=296]
+shader = ExtResource( 17 )
+shader_param/Strength = 3.33
+shader_param/RandomOffset = 256.0
+
+[sub_resource type="DynamicFont" id=284]
+size = 42
+outline_size = 2
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFontData" id=282]
+font_path = "res://debug/Roboto-Medium.ttf"
+
+[sub_resource type="DynamicFont" id=283]
+size = 36
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+extra_spacing_top = 5
+extra_spacing_bottom = 5
+font_data = SubResource( 282 )
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="gradiantBg" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource( 294 )
+expand = true
+stretch_mode = 7
+script = ExtResource( 14 )
+
+[node name="photoBG" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0.65098 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 7
+
+[node name="ViewportContainer" type="ViewportContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="Viewport" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 720 )
+size_override_stretch = true
+transparent_bg = true
+handle_input_locally = false
+fxaa = true
+render_target_update_mode = 3
+
+[node name="Spatial" type="Spatial" parent="ViewportContainer/Viewport"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="ViewportContainer/Viewport/Spatial"]
+environment = SubResource( 290 )
+
+[node name="Camera" type="Camera" parent="ViewportContainer/Viewport/Spatial"]
+transform = Transform( 0.87795, -0.133383, 0.459797, 0, 0.960406, 0.278606, -0.478753, -0.244602, 0.843188, -0.627043, 3.82121, 1.782 )
+fov = 22.1
+
+[node name="MeshInstance" type="MeshInstance" parent="ViewportContainer/Viewport/Spatial"]
+transform = Transform( 0.634386, 0, 0, 0, 1, 0, 0, 0, 1, -5.9418, 0, 0.301691 )
+visible = false
+mesh = SubResource( 3 )
+material/0 = ExtResource( 8 )
+
+[node name="sprintcar" parent="ViewportContainer/Viewport/Spatial" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3846, 0, -6.2659 )
+script = ExtResource( 12 )
+
+[node name="screamLogo" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -408.0
+margin_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 6
+
+[node name="driverLogo" type="TextureRect" parent="."]
+margin_left = 32.0
+margin_top = 64.0
+margin_right = 252.0
+margin_bottom = 284.0
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 7
+
+[node name="driverNumber" type="Label" parent="."]
+margin_left = 32.0
+margin_top = 148.0
+margin_right = 430.0
+margin_bottom = 262.0
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 285 )
+text = "V00"
+align = 2
+script = ExtResource( 13 )
+
+[node name="driverName" type="Label" parent="."]
+material = SubResource( 296 )
+margin_left = 32.0
+margin_top = 280.0
+margin_right = 482.0
+margin_bottom = 323.0
+custom_colors/font_color = Color( 0.929412, 0.929412, 0.929412, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = SubResource( 284 )
+text = "tim van ginneken"
+uppercase = true
+script = ExtResource( 11 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Menu" type="GridContainer" parent="Control"]
+material = ExtResource( 15 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 32.0
+margin_top = 340.0
+margin_right = 276.0
+margin_bottom = 582.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Start" type="Button" parent="Control/Menu"]
+modulate = Color( 0.239216, 0.866667, 0.0392157, 1 )
+material = ExtResource( 16 )
+margin_right = 254.0
+margin_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 283 )
+text = "Lets Go Racing"
+
+[node name="driver" type="Button" parent="Control/Menu"]
+modulate = Color( 0.317647, 0.631373, 0.980392, 1 )
+material = ExtResource( 16 )
+margin_top = 63.0
+margin_right = 254.0
+margin_bottom = 122.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 283 )
+text = "Driver"
+
+[node name="credits" type="Button" parent="Control/Menu"]
+modulate = Color( 0.894118, 0.584314, 0.196078, 1 )
+material = ExtResource( 16 )
+margin_top = 126.0
+margin_right = 254.0
+margin_bottom = 185.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 283 )
+text = "Credits"
+
+[node name="exit" type="Button" parent="Control/Menu"]
+modulate = Color( 1, 0.290196, 0.290196, 1 )
+material = ExtResource( 16 )
+margin_top = 189.0
+margin_right = 254.0
+margin_bottom = 248.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 283 )
+text = "Exit"
+
+[node name="sponsors" type="TextureRect" parent="."]
+anchor_top = 0.917
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+visible = false
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 32.0
+margin_top = -22.0
+margin_right = 501.0
+margin_bottom = 233.0
+
+[node name="Label" type="Label" parent="ScrollContainer"]
+margin_right = 834.0
+margin_bottom = 582.0
+custom_colors/font_color = Color( 1, 0.92549, 0.92549, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Thanks for checking out SCREAM.
+A Free, Open Source Sprintcar Racing Game
+
+It is currently in active and RAPID development 
+and there will probbly be a few bugs and glitches.
+Good news is, I update SCREAM reguarly.
+
+Some things to note:
+The loading of the game after pressing \"Let's Go racing\"
+has no progress bar, but it is loading, just be patient.
+
+Opponents are coming in the next update or two 
+(i may make some cosmetic and minor tweaks inbetween)
+
+If you get lost look, for the pit gate sign to enter the track."
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+volume_db = -3.355
+autoplay = true
+
+[connection signal="pressed" from="Control/Menu/Start" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Control/Menu/driver" to="gradiantBg" method="_on_settings_pressed"]
+[connection signal="pressed" from="Control/Menu/driver" to="ViewportContainer/Viewport/Spatial/sprintcar" method="_on_driver_pressed"]
+[connection signal="pressed" from="Control/Menu/driver" to="driverNumber" method="_on_settings_pressed"]
+[connection signal="pressed" from="Control/Menu/driver" to="driverName" method="_on_settings_pressed"]
+[connection signal="pressed" from="Control/Menu/credits" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Control/Menu/exit" to="." method="_on_Button4_pressed"]

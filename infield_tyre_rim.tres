@@ -1,0 +1,12 @@
+[gd_resource type="SpatialMaterial" format=2]
+
+[resource]
+resource_name = "Material.002"
+vertex_color_use_as_albedo = true
+params_cull_mode = 2
+albedo_color = Color( 0.466667, 0.054902, 0.054902, 1 )
+metallic = 0.72
+metallic_specular = 1.0
+roughness = 0.11
+uv1_scale = Vector3( 20, 20, 20 )
+uv1_offset = Vector3( 0.349, -3.642, 0.163 )

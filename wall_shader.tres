@@ -1,0 +1,38 @@
+[gd_resource type="ShaderMaterial" load_steps=8 format=2]
+
+[ext_resource path="res://wall_texture.tres" type="Shader" id=1]
+
+[sub_resource type="OpenSimplexNoise" id=355]
+octaves = 1
+period = 32.0
+
+[sub_resource type="NoiseTexture" id=360]
+seamless = true
+noise = SubResource( 355 )
+
+[sub_resource type="OpenSimplexNoise" id=357]
+octaves = 5
+period = 53.5
+persistence = 0.541
+lacunarity = 1.95
+
+[sub_resource type="NoiseTexture" id=361]
+width = 1024
+height = 1024
+seamless = true
+noise = SubResource( 357 )
+
+[sub_resource type="OpenSimplexNoise" id=359]
+
+[sub_resource type="NoiseTexture" id=362]
+width = 1024
+height = 1024
+seamless = true
+noise = SubResource( 359 )
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/fade_scale = 0.144
+shader_param/noise_texture = SubResource( 362 )
+shader_param/end_texture = SubResource( 361 )
+shader_param/base_texture = SubResource( 360 )

@@ -1,0 +1,14 @@
+[gd_resource type="NoiseTexture" load_steps=2 format=2]
+
+[sub_resource type="OpenSimplexNoise" id=1]
+seed = 98
+period = 0.3
+persistence = 1.0
+lacunarity = 0.1
+
+[resource]
+resource_name = "Material.001_albedo"
+flags = 39
+seamless = true
+bump_strength = 0.7
+noise = SubResource( 1 )
