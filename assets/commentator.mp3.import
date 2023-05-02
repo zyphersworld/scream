@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/commentator.mp3-37b282e7d71b7fe9e35d84f9abc88bbf.mp3str"
+
+[deps]
+
+source_file="res://assets/commentator.mp3"
+dest_files=[ "res://.import/commentator.mp3-37b282e7d71b7fe9e35d84f9abc88bbf.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
