@@ -22,7 +22,7 @@ Creator & Developer
 ARTICLE FROM "The Warrnambool Standard":
 https://www.standard.net.au/story/8177959/
 
-#Premier Speedway has its own sprint car racing game thanks to one dedicated fan
+# Premier Speedway has its own sprint car racing game thanks to one dedicated fan
 
 A Koroit game developer has released a sprint car racing game featuring
 drivers, sponsors and commentary from the Premier Speedway community.
