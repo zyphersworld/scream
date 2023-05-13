@@ -8,20 +8,24 @@ export(int) var number
 export(Array, String) var colors = ["000", "000"]
 export(String, FILE) var wing
 
-func getGradients() -> GradientTexture2D:
-	
-	var gradient_data := {
-		0.0: Color(colors[0]),
-		0.5: Color(colors[1]),
-		0.75: Color(colors[0]),
-		1.0: Color(colors[1]),
-	}
+var gradientTexture:GradientTexture2D setget , getGradientTexture
 
-	var gradient := Gradient.new()
-	gradient.offsets = gradient_data.keys()
-	gradient.colors = gradient_data.values()
-
-	var gradient_texture := GradientTexture2D.new()
-	gradient_texture.gradient = gradient
+func getGradientTexture() -> GradientTexture2D:
 	
-	return gradient_texture
+	if (gradientTexture == null):
+		
+		var gradient_data := {
+			0.0: Color(colors[0]),
+			0.5: Color(colors[1]),
+			0.75: Color(colors[0]),
+			1.0: Color(colors[1]),
+		}
+
+		var gradient := Gradient.new()
+		gradient.offsets = gradient_data.keys()
+		gradient.colors = gradient_data.values()
+
+		gradientTexture = GradientTexture2D.new()
+		gradientTexture.gradient = gradient
+	
+	return gradientTexture
