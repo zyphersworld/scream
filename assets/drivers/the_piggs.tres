@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/DriverData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+driverName = "The Piggs"
+prefix = "V"
+number = 0
+colors = [ "000", "333" ]
+wing = "res://assets/drivers/wings/scream.png"

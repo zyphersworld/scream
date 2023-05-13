@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Resource",
+"class": "DriverData",
+"language": "GDScript",
+"path": "res://scripts/DriverData.gd"
+}, {
 "base": "Control",
 "class": "VirtualJoystick",
 "language": "GDScript",
 "path": "res://joystick/virtual_joystick.gd"
 } ]
 _global_script_class_icons={
+"DriverData": "",
 "VirtualJoystick": ""
 }
 
@@ -27,7 +33,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Globals="*res://globals.gd"
+Globals="*res://scripts/globals.gd"
 
 [display]
 
