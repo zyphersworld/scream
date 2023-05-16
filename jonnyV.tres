@@ -1,6 +1,7 @@
 [gd_resource type="SpatialMaterial" load_steps=2 format=2]
 
-[ext_resource path="res://assets/scream_sprint_pig.png" type="Texture" id=1]
+[ext_resource path="res://assets/drivers/wings/scream_sprint_pig.png" type="Texture" id=1]
+
 
 [resource]
 resource_name = "wings"

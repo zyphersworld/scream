@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/DriverData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+driverName = "Koby O'Shannassy"
+prefix = "V"
+number = 60
+colors = [ "eee", "00f" ]
+wing = "res://assets/drivers/wings/scream_koby.png"

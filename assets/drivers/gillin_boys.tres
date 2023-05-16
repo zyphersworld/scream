@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/DriverData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+driverName = "The Gillin Boys Foundation"
+prefix = "G"
+number = 0
+colors = [ "282", "000" ]
+wing = "res://assets/drivers/wings/scream_gillin_boys.png"

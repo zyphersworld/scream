@@ -16,7 +16,7 @@ func _ready():
 	changeName(index)
 
 func changeName(index):
-	text = str(drivers[index].name)
+	text = str(drivers[index].driverName)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
